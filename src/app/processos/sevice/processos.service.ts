@@ -1,23 +1,19 @@
 import { Processos } from './../processos/model/processos';
 import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProcessosService {
 
-  constructor() { }
+  private readonly API='/assets/processos.json';
 
-  list () : Processos[]{
-return [{
-  numeroProcesso: 123 ,
-  tipoProcesso: "Trabalhista",
-  dataEntrada: 2022,
-  valorRecurso: 20000,
-  objetivo: "Indenização"
+  constructor(private httpClient: HttpClient ) { }
 
+  list () {
 
-}]
+return this.httpClient.get<Processos[]>(this.API);
 
   }
 }

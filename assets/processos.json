@@ -1,0 +1,9 @@
+[
+{
+    "numeroProcesso" : 1234,
+    "tipoProcesso" : "trabalhista",
+    "dataEntrada" : 2022,
+    "valorRecurso": 20000,
+    "objetivo": "indenizaçã"
+}
+]
